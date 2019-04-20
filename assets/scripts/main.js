@@ -1,2 +1,2 @@
-require('../styles/style.scss');
-console.log('scss');
+require('../styles/main.scss');
+

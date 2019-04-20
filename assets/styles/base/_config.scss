@@ -1,0 +1,26 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
+$break-tablet: 45rem;
+$break-desktop: 64rem;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: color(lightGrey);
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 20px;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
