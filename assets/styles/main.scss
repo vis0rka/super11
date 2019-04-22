@@ -26,7 +26,7 @@
     display: flex;
     height: auto;
     margin: 1rem;
-    width: calc(100% - 20px);
+    width: calc(100% - 2rem);
 
     @media screen and (min-width: $break-tablet) {
       margin: 1rem auto;
@@ -40,15 +40,15 @@
 }
 
 .card {
-  background-color: color(white);
+  background-color: color(background);
   border-radius: 2px;
-  box-shadow: 0px 1px 2px 0px color(blackShadow);
+  box-shadow: 0px 1px 2px 0px color(shadow);
   height: auto;
   width: 100%;
 
   &--bcg-grad {
-    background: -webkit-linear-gradient(45deg, color(yellow) 0%, color(green) 100%);
-    background: linear-gradient(45deg, color(yellow) 0%, color(green) 100%);
+    background: -webkit-linear-gradient(color(yellowGreen));
+    background: linear-gradient(color(yellowGreen));
   }
 
   &__header {
@@ -67,10 +67,10 @@
   }
 
   &__text {
-    background-color: color(blue);
+    background-color: color(primary);
     border-radius: 15px;
-    box-shadow: 0px 10px 20px 0px rgba(color(blue), 0.5);
-    color: color(white);
+    box-shadow: 0px 10px 20px 0px rgba(color(primary), 0.5);
+    color: #fff;
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;
@@ -82,16 +82,16 @@
   }
 
   &__text--yellow {
-    background-color: color(yellow);
-    box-shadow: 0px 10px 20px 0px rgba(color(yellow), 0.5);
+    background-color: color(secondary);
+    box-shadow: 0px 10px 20px 0px rgba(color(secondary), 0.5);
     color: black;
   }
 
   &__close {
-    background-color: color(white);
+    background-color: #fff;
     border-radius: 20px;
-    border: 2px solid color(green);
-    box-shadow: 0px 10px 20px 0px rgba(color(green), 0.5);
+    border: 2px solid color(third);
+    box-shadow: 0px 10px 20px 0px rgba(color(third), 0.5);
     display: inline-block;
     height: 4rem;
     position: absolute;
@@ -101,7 +101,7 @@
 
     &::before,
     &::after {
-      background-color: color(green);
+      background-color: color(third);
       content: " ";
       height: 2rem;
       left: 1.6rem;
@@ -131,7 +131,7 @@
   }
 
   &__text-relevant-container {
-    border-left: 7px solid color(yellow);
+    border-left: 7px solid color(secondary);
     margin: 2rem;
   }
 
@@ -141,9 +141,9 @@
   }
 
   &__button {
-    background-color: color(yellow);
+    background-color: color(secondary);
     border-radius: 20px;
-    box-shadow: 0px 2px 0px 0px color(yellowShadow);
+    box-shadow: 0px 2px 0px 0px color(secondaryDark);
     border: none;
     padding: 1rem 5rem;
     font-size: 1.4rem;
@@ -175,7 +175,7 @@
   }
 
   &__input {
-    border: 2px solid color(greyLight);
+    border: 2px solid color(borders);
     border-radius: 2px;
     height: 4rem;
     margin-top: 0.5rem;
@@ -196,28 +196,29 @@
   }
 
   &__radio-input:checked + &__radio-label {
-    background-color: color(blue);
-    border-color: color(blue);
-    color: color(white);
+    background-color: color(primary);
+    border-color: color(primary);
+    color: #fff;
     &::before {
-      background-color: color(blue);
-      border: 4px solid color(white);
+      background-color: color(primary);
+      border: 4px solid #fff;
       width: 1.7rem;
       height: 1.7rem;
     }
   }
 
   &__radio-label {
-    border: 2px solid color(greyLight);
+    background-color: #fff;
+    border: 2px solid color(borders);
     border-radius: 20px;
     font-size: 1.4rem;
-    padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+    padding: 0.6rem 1.5rem 0.6rem 0.6rem;
     cursor: pointer;
 
     &::before {
       background-color: transparent;
       background-clip: content-box;
-      border: 2px solid color(greyLight);
+      border: 2px solid color(borders);
       border-radius: 100%;
       content: "";
       display: inline-block;
@@ -228,11 +229,11 @@
       width: 1.7rem;
     }
     &:hover {
-      border-color: color(blue);
-      color: color(blue);
+      border-color: color(primary);
+      color: color(primary);
       &::before {
-        background-color: color(greyLight);
-        border-color: color(blue);
+        background-color: color(borders);
+        border-color: color(primary);
       }
     }
   }
@@ -246,12 +247,12 @@
   }
 
   &__checkbox-input:checked + &__checkbox-label::before {
-    background-color: color(blue);
-    border-color: color(blue);
+    background-color: color(primary);
+    border-color: color(primary);
   }
 
   &__checkbox-input:checked + &__checkbox-label::after {
-    border-color: color(white);
+    border-color: #fff;
     display: inline;
   }
 
@@ -263,7 +264,7 @@
     &::before {
       background-color: transparent;
       border-radius: 2px;
-      border: 2px solid color(greyLight);
+      border: 2px solid color(borders);
       content: "";
       display: inline-block;
       height: 2.2rem;
@@ -274,21 +275,21 @@
     }
 
     &::after {
-      border-right: 3px solid color(greyLight);
-      border-top: 3px solid color(greyLight);
+      border-right: 3px solid color(borders);
+      border-top: 3px solid color(borders);
       display: none;
       content: "";
       height: 1.3rem;
-      left: 4px;
+      left: 5px;
       position: absolute;
-      top: 8px;
+      top: 10px;
       transform: scaleX(-1) rotate(135deg);
       transform-origin: left top;
       width: 0.7rem;
     }
 
     &:hover::before {
-      border-color: color(blue);
+      border-color: color(primary);
     }
 
     &:hover::after {
@@ -306,7 +307,8 @@
   }
 
   &__picker-label {
-    border: 2px solid color(greyLight);
+    background-color: #fff;
+    border: 2px solid color(borders);
     border-radius: 20px;
     cursor: pointer;
     display: inline-block;
@@ -316,8 +318,8 @@
   }
 
   &__picker-input:checked + &__picker-label {
-    background-color: color(blue);
-    color:white;
+    background-color: color(primary);
+    color:#fff;
     font-weight: bold;
   }
 }

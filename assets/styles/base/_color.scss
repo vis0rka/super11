@@ -1,9 +1,10 @@
 $colors: (
-  greyLight: #CBCBCB,
-  blue: rgb(0, 137, 207),
-  yellow: rgb(250, 205, 16),
-  yellowShadow: #C8A40F,
-  green: rgb(85, 167, 56),
-  blackShadow: rgba(0, 0, 0, 0.2),
-  white: #fff,
+  borders: #CBCBCB,
+  primary: rgb(0, 137, 207),
+  secondary: rgb(250, 205, 16),
+  secondaryDark: #C8A40F,
+  third: rgb(85, 167, 56),
+  shadow: rgba(0, 0, 0, 0.2),
+  background:#fff,
+  yellowGreen: (45deg, rgb(250, 205, 16) 0%, rgb(85, 167, 56) 100%),
 );
