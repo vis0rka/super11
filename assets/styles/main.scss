@@ -22,15 +22,15 @@
   width: 100%;
 
   &__item {
-    display: flex;
-    width: calc(100% - 20px);
-    margin: 1rem;
-    height: auto;
     border-radius: 2px;
+    display: flex;
+    height: auto;
+    margin: 1rem;
+    width: calc(100% - 20px);
 
     @media screen and (min-width: $break-tablet) {
-      width: calc(50% - 2rem);
       margin: 1rem auto;
+      width: calc(50% - 2rem);
     }
 
     @media screen and (min-width: $break-desktop) {
@@ -40,11 +40,11 @@
 }
 
 .card {
-  width: 100%;
-  height: auto;
+  background-color: color(white);
   border-radius: 2px;
   box-shadow: 0px 1px 2px 0px color(blackShadow);
-  background-color: #fff;
+  height: auto;
+  width: 100%;
 
   &--bcg-grad {
     background: -webkit-linear-gradient(45deg, color(yellow) 0%, color(green) 100%);
@@ -53,33 +53,32 @@
 
   &__header {
     border-radius: 2px 2px 0 0;
-    width: 100%;
-    height: 200px;
     background-image: url("https://image.shutterstock.com/image-photo/car-thief-using-tool-break-450w-147792686.jpg");
     background-size: cover;
+    height: 200px;
     position: relative;
+    width: 100%;
   }
 
   &__header--polygon {
     height: 25rem;
-    -webkit-clip-path: polygon(0 -50%, 160% 0, 100% 250px, 0 200px);
     clip-path: polygon(0 -50%, 160% 0, 100% 250px, 0 200px);
+    -webkit-clip-path: polygon(0 -50%, 160% 0, 100% 250px, 0 200px);
   }
 
   &__text {
+    background-color: color(blue);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 0px rgba(color(blue), 0.5);
+    color: color(white);
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;
-
-    text-transform: uppercase;
     position: absolute;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
     top: 20px;
     left: -15px;
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    background-color: color(blue);
-    box-shadow: 0px 10px 20px 0px rgba(color(blue), 0.5);
-    color: white;
   }
 
   &__text--yellow {
@@ -89,26 +88,26 @@
   }
 
   &__close {
-    display: inline-block;
-    background-color: #fff;
+    background-color: color(white);
     border-radius: 20px;
+    border: 2px solid color(green);
+    box-shadow: 0px 10px 20px 0px rgba(color(green), 0.5);
+    display: inline-block;
+    height: 4rem;
     position: absolute;
     top: -2rem;
     right: -2rem;
     width: 4rem;
-    height: 4rem;
-    border: 2px solid color(green);
-    box-shadow: 0px 10px 20px 0px rgba(color(green), 0.5);
 
     &::before,
     &::after {
-      position: absolute;
-      left: 1.7rem;
-      top: 0.9rem;
+      background-color: color(green);
       content: " ";
       height: 2rem;
+      left: 1.6rem;
+      top: 0.8rem;
+      position: absolute;
       width: 0.3rem;
-      background-color: #55a738;
     }
     &::before {
       transform: rotate(45deg);
@@ -120,9 +119,9 @@
 
   &__title {
     font-size: 1.6rem;
-    text-align: center;
-    padding: 0.3rem 0;
     margin-top: 2.5rem;
+    padding: 0.3rem 0;
+    text-align: center;
   }
 
   &__text-main {
@@ -142,11 +141,11 @@
   }
 
   &__button {
-    border-radius: 20px;
-    padding: 1rem 5rem;
-    border: none;
     background-color: color(yellow);
+    border-radius: 20px;
     box-shadow: 0px 2px 0px 0px color(yellowShadow);
+    border: none;
+    padding: 1rem 5rem;
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -176,9 +175,9 @@
   }
 
   &__input {
-    height: 4rem;
-    border: 2px solid color(lightGrey);
+    border: 2px solid color(greyLight);
     border-radius: 2px;
+    height: 4rem;
     margin-top: 0.5rem;
   }
 
@@ -199,41 +198,41 @@
   &__radio-input:checked + &__radio-label {
     background-color: color(blue);
     border-color: color(blue);
-    color: white;
+    color: color(white);
     &::before {
-      border: 4px solid white;
       background-color: color(blue);
-      width: 1.8rem;
-      height: 1.8rem;
+      border: 4px solid color(white);
+      width: 1.7rem;
+      height: 1.7rem;
     }
   }
 
   &__radio-label {
-    font-size: 1.4rem;
-    border: 2px solid color(lightGrey);
+    border: 2px solid color(greyLight);
     border-radius: 20px;
+    font-size: 1.4rem;
     padding: 0.6rem 1.2rem 0.6rem 0.6rem;
     cursor: pointer;
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-right: 0.4rem;
-      border-radius: 100%;
-      vertical-align: -0.3rem;
-      border: 2px solid color(lightGrey);
-      padding: 0.16rem;
       background-color: transparent;
       background-clip: content-box;
+      border: 2px solid color(greyLight);
+      border-radius: 100%;
+      content: "";
+      display: inline-block;
+      height: 1.7rem;
+      margin-right: 0.4rem;
+      padding: 0.2rem;
+      vertical-align: -0.3rem;
+      width: 1.7rem;
     }
     &:hover {
       border-color: color(blue);
       color: color(blue);
       &::before {
+        background-color: color(greyLight);
         border-color: color(blue);
-        background-color: color(lightGrey);
       }
     }
   }
@@ -252,31 +251,32 @@
   }
 
   &__checkbox-input:checked + &__checkbox-label::after {
-    border-color: white;
+    border-color: color(white);
     display: inline;
   }
 
   &__checkbox-label {
     font-size: 1.2rem;
-    position: relative;
     cursor: pointer;
+    position: relative;
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 2.2rem;
-      height: 2.2rem;
-      margin-right: 0.5rem;
-      vertical-align: -0.6rem;
-      border: 2px solid color(lightGrey);
-      padding: 0.12rem;
       background-color: transparent;
       border-radius: 2px;
+      border: 2px solid color(greyLight);
+      content: "";
+      display: inline-block;
+      height: 2.2rem;
+      margin-right: 0.5rem;
+      padding: 0.12rem;
+      vertical-align: -0.6rem;
+      width: 2.2rem;
     }
 
     &::after {
-      border-right: 3px solid #CBCBCB;
-      border-top: 3px solid #CBCBCB;
+      border-right: 3px solid color(greyLight);
+      border-top: 3px solid color(greyLight);
+      display: none;
       content: "";
       height: 1.3rem;
       left: 4px;
@@ -285,7 +285,6 @@
       transform: scaleX(-1) rotate(135deg);
       transform-origin: left top;
       width: 0.7rem;
-      display: none;
     }
 
     &:hover::before {
@@ -307,17 +306,18 @@
   }
 
   &__picker-label {
+    border: 2px solid color(greyLight);
+    border-radius: 20px;
     cursor: pointer;
     display: inline-block;
-    border: 2px solid #CBCBCB;
-    border-radius: 20px;
     font-size: 1.2rem;
-    text-align: center;
     padding: 0.8rem 4rem;
+    text-align: center;
   }
 
   &__picker-input:checked + &__picker-label {
     background-color: color(blue);
     color:white;
+    font-weight: bold;
   }
 }
