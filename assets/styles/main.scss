@@ -1,5 +1,10 @@
 @import "./helpers/functions.scss", "./helpers/mixins", "./base/color", "./base/config.scss",  "./base/typo" ;
 
+body {
+  background-color: color(lightGrey);
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 2rem;
+}
 
  .wrapper {
   margin:0 auto;
@@ -29,7 +34,7 @@
     width: calc(100% - 2rem);
 
     @media screen and (min-width: $break-tablet) {
-      margin: 1rem auto;
+      margin: 1.5rem auto 1rem auto;
       width: calc(50% - 2rem);
     }
 
