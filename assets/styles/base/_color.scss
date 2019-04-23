@@ -1,10 +1,10 @@
 $colors: (
-  borders: #CBCBCB,
+  borders: rgb(203, 203, 203),
   primary: rgb(0, 137, 207),
   secondary: rgb(250, 205, 16),
-  secondaryDark: #C8A40F,
+  secondaryDark: rgb(200, 164, 15),
   third: rgb(85, 167, 56),
   shadow: rgba(0, 0, 0, 0.2),
-  background:#fff,
+  background:rgb(255,255,255),
   yellowGreen: (45deg, rgb(250, 205, 16) 0%, rgb(85, 167, 56) 100%),
 );
